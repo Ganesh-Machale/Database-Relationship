@@ -29,7 +29,8 @@ const mongoose = require("mongoose");
             city:"Daund",
           }]    
         });
-       let result = await user1.save() ;
+       user1.addresses.push({location:"MIT ADT UNIVERSITY PUNE" , city:"Pune"}) ;
+       let result = await user1.save();
        console.log(result);
      };
 
